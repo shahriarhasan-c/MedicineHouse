@@ -1,0 +1,176 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: monospace;
+}
+.row
+{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.main-nav
+{
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+}
+.main-nav li
+{
+    display: inline-block;
+}
+
+.main-nav li.active a
+{
+    border: 1px solid white;
+    
+}
+
+.main-nav li a:hover
+{
+    border: 1px solid white;
+}
+
+
+.main-nav li a
+{
+    color: white;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+}
+
+.hero
+{
+    position: absolute;
+    width: 1200px;
+    margin-left: 140px;
+    margin-top: 0px;
+    position: center;
+    
+}
+
+
+h1
+{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 270px;
+    font-family: sans-serif;
+}
+header
+{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(bg.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.button
+{   
+    position: absolute;
+    left: 220px;
+    margin-top: 10px;
+    margin-left: 200px;
+    width: 400px;
+    text-align: center;
+}
+
+.btn
+{
+    border: 1px solid white;
+    padding: 10px 30px;
+    color: white;
+    text-decoration: none;
+    margin-right: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.button a 
+{
+    border: none;
+    outline: none;
+}
+.btn-one
+{
+    background-color: darkorange;
+    font-family: "Roboto", sans-serif;
+}
+
+.btn-two
+{
+    font-family: "Roboto", sans-serif;
+}
+.btn-three
+{
+    font-family: "Roboto", sans-serif;
+}
+.btn-four
+{
+    font-family: "Roboto", sans-serif;
+}
+.btn-five
+{
+    font-family: "Roboto", sans-serif;
+}
+
+
+.btn-two:hover
+{
+    background-color: darkorange;
+    transition: all 0.2s ease-in;
+    
+        
+}
+.btn-three:hover
+{
+    background-color: darkorange;
+    transition: all 0.2s ease-in;
+    
+        
+}
+.btn-four:hover
+{
+    background-color: darkorange;
+    transition: all 0.2s ease-in;
+    
+        
+}
+.btn-five:hover
+{
+    background-color: darkorange;
+    transition: all 0.2s ease-in;
+    
+        
+}
+
+
+
+.logout input[type="button"]
+         {  
+            text-align: center;
+            position: absolute;
+            top: 5%;
+            left: 1600px;
+            transform: translate(-50%,-50%);
+            height: 40px;
+            width: 80px;
+            border-radius: 1px;
+            padding: 10px;
+            color: orange;
+            font-family: sans-serif;
+         }
+
+
+
+
+
+
+
+
