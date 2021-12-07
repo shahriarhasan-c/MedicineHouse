@@ -22,7 +22,7 @@
 
 <body>
 <div class="logout" style="margin-left: : 10px;">
-<a href="home_page.php"><input type="button" name="logout" value="Logout"></a>
+<a href="index.php"><input type="button" name="logout" value="Logout"></a>
 </div>
     <form action="search.php" method="POST">
          <div class="search_box" style="margin-left: : 10px;">
