@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+        *{
+            font-family: 'Titillium Web', sans-serif;
+        }
+        .product{
+            border: 2px solid #eaeaec;
+            margin: -1px 19px 3px -1px;
+            padding: 10px;
+            text-align: center;
+            background-color: #efefef;
+        }
+        body
+        {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: url(shopping_cart.jpg);
+            background-size: cover;
+        }
+        table, th, tr{
+            text-align: center;
+        }
+        .title2{
+            text-align: center;
+            color: #66afe9;
+            background-color: #efefef;
+            padding: 2%;
+        }
+        h2{
+            text-align: center;
+            color: #66afe9;
+            background-color: #efefef;
+            padding: 2%;
+        }
+         h1{
+            text-align: center;
+            color: #66afe9;
+            background-color: #efefef;
+            padding: 2%;
+            margin-top: 40%;
+        }
+            
+        }
+        table th{
+            background-color: #efefef;
+        }
+       .input_box
+        {  
+            position: absolute;
+            top: 147%;
+            width: 174px;
+            height: 25px;
+            border: 1px solid orange;
+            background-color: orange;
+        }
+        .search_box
+       {
+         position: absolute;
+         top: 10%;
+         left: 89%;
+         transform: translate(-50%,-50%);
+         height: 25px;
+         border-radius: 1px;
+         padding: 10px;
+         color: white;
+         font-family: sans-serif;
+        }
+        .box input[type="button"]
+         { 
+           position: absolute;
+           top: 3%;
+           left: 1%;
+           border: none;
+           outline: none;
+           color: #fff;
+           background:orange;
+           padding: 10px 20px;
+           cursor: pointer;
+           border-radius: 2px;
+         }
+         .search_box input[type="submit"]
+         {  
+            text-align: center;
+            position: absolute;
+            top: 118%;
+            left: 238px;
+            transform: translate(-50%,-50%);
+            height: 40px;
+            width: 80px;
+            border-radius: 1px;
+            padding: 10px;
+            color: white;
+            font-family: sans-serif;
+         }
+           
+
+  .logout input[type="button"]
+         {  
+            text-align: center;
+            position: absolute;
+            top: 5%;
+            left: 1600px;
+            transform: translate(-50%,-50%);
+            height: 40px;
+            width: 80px;
+            border-radius: 1px;
+            padding: 10px;
+            color: orange;
+            font-family: sans-serif;
+         }
+         .valueToSearch
+         {
+            height: 40px;
+            width: 188px;
+            color: black;
+            border-radius: 1px solid white;
+         }
+
+.src
+       {
+         
+          position: absolute;
+         top: 88%;
+         left: 75%;
+         transform: translate(-50%,-50%);
+         height: 25px;
+         border-radius: 1px;
+         padding: 10px;
+         color: white;
+         font-family: sans-serif;
+       
+         
+        
+         
+        
+        }
