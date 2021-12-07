@@ -2,10 +2,11 @@
 <html>
 <head>
 	<title>update records</title>
-	
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     
         <style type="text/css">
-           
+            
 			.th
 			{   
 				color: orange;
@@ -28,7 +29,7 @@
        $check= mysqli_query( $con , $query);
 ?>
 <div class="container">
-	<table >
+	<table class="table table-condensed table-bordered">
 	    <tr class="th">
 			<th>Serial Number</th>
 			<th>Medicine Name</th>
