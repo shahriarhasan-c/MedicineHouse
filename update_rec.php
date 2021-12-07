@@ -4,10 +4,18 @@
 	<title>update records</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <h2 class="heading">Update Medicine</h2>
+
     
         <style type="text/css">
             body {
                 background-image: url("a.jpg");
+            }
+            .heading{
+            	color: Orange;
+            	padding-bottom: 35px;
+            	text-align: center;
+
             }
 			.th
 			{   
