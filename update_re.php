@@ -1,7 +1,7 @@
 
 <?php
        $con = mysqli_connect("localhost", "root", "", "project");
-       $update =  "UPDATE medicine_list SET pname = '$_POST[pame]',price = '$_POST[price]' WHERE id = '$_POST[id]' ";
+       $update =  "UPDATE medicine_list SET pname = '$_POST[pname]',price = '$_POST[price]' WHERE id = '$_POST[id]' ";
        if (mysqli_query($con,$update )) {
        	  
        	  header("refresh:1; url:update_rec.php");
