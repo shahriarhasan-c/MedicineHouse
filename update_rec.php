@@ -66,7 +66,7 @@
 		<input type="submit" name="back" value="Back to page" class="btn btn-info">
 	</form>
 	<?php
-	    $con = mysqli_connect("localhost", "root", "", "project");
+	   
 	     if (isset($_POST['back']))
 	     {   
 	     	echo "
