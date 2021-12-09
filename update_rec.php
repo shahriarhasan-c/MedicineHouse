@@ -63,23 +63,18 @@
 		
 </table>
 	<form method="POST" style="top: 20px;">
-		<input type="submit" name="back" value="Back to page" class="btn btn-info">
+		<input type="submit" name="back" value="Back to previous page" class="btn btn-info">
 	</form>
 	<?php
 	   
 	     if (isset($_POST['back']))
 	     {   
 	     	echo "
-
           				    <script>
-
                             
                                   window.location.href='admin_page.php';
-
           				    </script>
-
-          				";
-
+          				"; 
 	     }
 
 	?>
