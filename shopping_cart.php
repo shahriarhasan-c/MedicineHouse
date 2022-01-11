@@ -18,11 +18,14 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style_s.css">
+    <style type="text/css">
+        .button5 {background-color: orange;}
+    </style>
 </head>
 
 <body>
 <div class="logout" style="margin-left: : 10px;">
-<a href="index.php"><input type="button" name="logout" value="Logout"></a>
+<a href="home_page.php"><input type="button" name="logout" value="Logout"></a>
 </div>
     <form action="search.php" method="POST">
          <div class="search_box" style="margin-left: : 10px;">
@@ -34,6 +37,12 @@
     <div class="box">
         <a href="upload_photo.php"><input type="button" name="" value="Upload Prescription"></a>
     </div>
+
+ <div class="box1" style="margin-top: 30px; text-align: center; font-size: 25px;">
+        <a href="suggestion.php"> <button class="button button5">Get Suggestions</button></a>
+    </div>
+
+
     <div class="container" style="width: 65%">
         <h2>Headache Medicine</h2>
         <?php
@@ -67,8 +76,7 @@
                                        value="Ratings">
                                        
                                        </form>
-                                       </div>
-                        
+                                       </div>                        
                     </div>
                     <?php
                 }
@@ -112,7 +120,6 @@
                 }
             }
         ?>
-
 
 
         <div style="clear: both"></div>
