@@ -48,7 +48,8 @@
 			<th>Update it</th>
         </tr>
 		<?php
-	                    while ($row = mysqli_fetch_array($check)) {
+	                    while ($row = mysqli_fetch_array($check))
+	                    {
                             extract($row);
                             
                             echo "<tr class = full><form action=update_re.php method = post>";
@@ -58,7 +59,7 @@
                             echo "<td><input class= t type=text name=price value=$price></td>";
                             echo "<td><input type=submit calss = to></td>";
                             echo "</form></tr>";
-	                 }
+	                    }
 		?>
 		
 </table>
