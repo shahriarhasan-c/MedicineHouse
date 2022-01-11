@@ -21,6 +21,7 @@
         <a href="delete_records.php" style="text-decoration: none;"> <h2 class="btn btn-two">Delete Medicine</h2>
         <a href="update_rec.php" style="text-decoration: none;"><h2 class="btn btn-three">Update Medicine</h2>
         <a href="seeappointment.php" style="text-decoration: none;"><h2 class="btn btn-four">See Appointment</h2>
+        <a href="showhow.html" style="text-decoration: none;"><h2 class="btn btn-five">Show User Login</h2>
     </div>    
             
     </div>
