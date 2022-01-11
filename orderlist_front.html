@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details</title>
+    <link rel="stylesheet" type="text/css" href="#">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="">
+<style>
+    .logout input[type="button"]
+         {  
+            text-align: center;
+            position: absolute;
+            top: 5%;
+            left: 1600px;
+            transform: translate(-50%,-50%);
+            height: 40px;
+            width: 80px;
+            border-radius: 1px;
+            padding: 10px;
+            color: orange;
+            font-family: sans-serif;
+         }
+    </style>
+</head>
+<body style="padding-top: 100px;">
+    <div class="logout" style="margin-left: 10px;">
+        <a href="admin_page.php"><input type="button" name="Go To website" value="Options"></a>
+        </div>
+        <div class="container">
+            <table id="tb" class="table table-condensed table-bordered">
+                <tr class="th">
+                    <th>Email </th>
+                    <th>Medicine ID</th>
+                    <th>Quantity</th>
+                                
+                </tr>
+            </table>
+            </div>
+            
+        <script>
+            let i = 0, j = 0;
+        var data = ' ';
+        idk = document.getElementById('tb')
+        data_str = ''  
+        fetch('http://localhost/draft/orderlist_back.php?')
+            .then(response => response.json())
+            .then(json => {
+
+                while (i < json['content'].length) {
+                    let x = idk.insertRow(i+1)
+                    x.insertCell().innerHTML = json['content'][i]['email']
+                    x.insertCell().innerHTML = json['content'][i]['medicin_id']
+                    x.insertCell().innerHTML = json['content'][i]['quantity']
+                    
+                    
+
+                    i++
+                }
+                
+            })
+        </script>    
+</body>
+</html>
