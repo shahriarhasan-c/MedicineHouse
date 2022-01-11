@@ -32,6 +32,7 @@
 					</div>
 		<input type="submit" name="sub" value="Submit">
 		<a href="feedback_input.php"><input style="background-color: green;" type="button" name="" value="See Feedback"></a>
+		<a href="shopping_cart.php"><input style="background-color: orange;" type="button" name="" value="Home"></a>
 	</form>
 </div>
 </form>
