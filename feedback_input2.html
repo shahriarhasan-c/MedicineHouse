@@ -102,51 +102,7 @@
 				
 			})
 		});
-/*		btnChange.addEventListener('click', () => {
-		//let id = prompt("Please enter the task id:");
-		fetch('http://localhost/crud2/read.php?option=2')
-			.then(response => response.json())
-			.then(json => {
-				let p2 = document.querySelector("#p2");
-				p2.innerHTML = json['age'];
-			})
-		});
-*/
-/*		btnChange.addEventListener('click', () => {
-			let id = prompt("Please enter the task id:");
-			fetch('https://jsonplaceholder.typicode.com/todos/' + id)
-				.then(response => response.json())
-				.then(json => {
-					let p2 = document.querySelector("#p2");
-					p2.innerHTML = json['title'];
-				})
-		});
-*/
 
-/*		btnChange.addEventListener('click', () => {
-			var xmlhttp = new XMLHttpRequest();
-			let id = prompt("Please enter the task id:");
-			xmlhttp.onreadystatechange = function() {
-			if (this.readyState == 4 && this.status == 200) {
-				let p1 = document.querySelector('#p1');
-				let p2 = document.querySelector('#p2');
-				let p3 = document.querySelector('#p3');
-
-				let myObj = JSON.parse(this.responseText);
-				p1.innerHTML = myObj['id'];
-				p2.innerHTML = myObj['title'];
-				p3.innerHTML = myObj['completed'];
-				//var myObj = JSON.parse(this.responseText);
-				//document.getElementById("content").innerHTML = myObj.title;
-			}
-			};
-			xmlhttp.open("GET","https://jsonplaceholder.typicode.com/todos/" + id, true);
-			xmlhttp.send();
-			//let name = prompt("Please enter your name");
-			//let p = document.querySelector('#p1');
-			//p.innerHTML = "Welcome, " + name;
-		});
-*/
 	</script>
 	</body>
 </html>
