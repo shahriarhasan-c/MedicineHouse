@@ -1,6 +1,6 @@
 <?php
 
-$id = $_GET['email'];
+$email = $_GET['email'];
 
 error_reporting(0);
 $link = mysqli_connect("localhost", "root", "", "project");
@@ -10,7 +10,7 @@ if (mysqli_connect_errno()) {
 $status = 'ERROR';
 $content = mysqli_connect_error();
 }
-$query = "SELECT * FROM appointment where email = '$id'";
+$query = "SELECT * FROM appointment where email = '$email'";
 if ($result = mysqli_query($link, $query)) {
 /* fetch associative array */
 while ($row = mysqli_fetch_assoc($result)) {
