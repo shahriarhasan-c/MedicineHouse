@@ -1,35 +1,101 @@
 <html>
 	<head>
 		<title>AJAX Test</title>
-	</head>
-	<body>	
-		<h2>Medicine House</h2>
-		<p id="p1">Empty Paragraph</p>
-		<p id="p2">Empty Paragraph</p>
-		<p id="p3">Empty Paragraph</p>
-		<p id="p4">Empty Paragraph</p>
-		<p id="p5">Empty Paragraph</p>
+		<style type="text/css">
+			body {
+                background-image: url("a.jpg");
+            }
+            #btnchange{
+              margin: 0;
+			  position: absolute;
+			  top: 22%;
+			  left: 42%;
+			  background-color: green;
+			  font-size: 25px;
+			  padding: 10px;
 
-		<button id="btnChange">See Your Feedback</button>
+            }
+			#p1{
+				text-align: center;
+				color: black;
+				font-size: 40px;
+				font-weight: bold;
+				margin-top: 50px;
+				margin-bottom: 10px;
+				margin-left: 90px;
+				margin-right: 90px;
+				background-color: pink;
+				padding: 30px;
+			}
+			#p2{
+				color: white;
+				font-size: 25px;
+				margin-top: 110px;
+				margin-bottom: 10px;
+				margin-left: 90px;
+				margin-right: 90px;
+				background-color: orange;
+				padding: 30px;
+			}
+			#p3{
+				color: white;
+				font-size: 25px;
+				margin-top: 50px;
+				margin-bottom: 10px;
+				margin-left: 90px;
+				margin-right: 90px;
+				background-color: orange;
+				padding: 30px;
+			}
+			#p4{
+				color: white;
+				font-size: 25px;
+				margin-top: 50px;
+				margin-bottom: 10px;
+				margin-left: 90px;
+				margin-right: 90px;
+				background-color: orange;
+				padding: 30px;
+			}
+			#p5{
+				color: white;
+				font-size: 25px;
+				margin-top: 50px;
+				margin-bottom: 10px;
+				margin-left: 90px;
+				margin-right: 90px;
+				background-color: orange;
+				padding: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div><button id="btnChange">Click to see Feedback</button></div>	
+		<div id="p1">Welcome to MEDICINE HOUSE feedback page</div>
+		<p id="p2">Name</p>
+		<p id="p3">Email</p>
+		<p id="p4">Age</p>
+		<p id="p5">Feedback</p>
+
 	<script>
 		let btnChange = document.querySelector("#btnChange");
 	
 		btnChange.addEventListener('click', () => {
-		let id = prompt("Please enter the Email:");
-		fetch('http://localhost/medicine_store/medicinehouse/see_feedback2.php?email='+id)
+		let email = prompt("Please enter the Email:");
+		fetch('http://localhost/medicine_store/medicinehouse/see_feedback2.php?email='+email)
 			.then(response => response.json())
 			.then(json => {
 				let p1 = document.querySelector("#p1");
 				let p2 = document.querySelector("#p2");
 				let p3 = document.querySelector("#p3");
-
-				p1.innerHTML ="Your ID is "+ json['content'][0]['id'];				
-				p2.innerHTML = json['content'][0]['patient_name'];
-				p3.innerHTML = json['content'][0]['email'];
-				p4.innerHTML = json['content'][0]['age'];	
-				if(json['content'][0]['feedback']!=null){			
-					p5.innerHTML = json['content'][0]['feedback'];
-
+			
+				p2.innerHTML ="Patient name is: " + json['content'][0]['patient_name'];
+				p3.innerHTML ="Patient email is: " +  json['content'][0]['email'];
+				p4.innerHTML ="Patient age is: " +  json['content'][0]['age'];	
+				if(json['content'][0]['feedback'] == 'No Feedback'){			
+					p5.innerHTML = 'Your feedback is not ready yet, very soon our doctor will provide his valuable feedback'
+				}else{
+					p5.innerHTML ="Patient feedback is: " +  json['content'][0]['feedback'];
 				}
 				
 				
