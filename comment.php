@@ -95,7 +95,7 @@ h1{
         idk = document.getElementById('cmt')
         
         
-        fetch('C:/xampp/htdocs/software_lab/MedicineHouse/comment_back.php?')
+        fetch('http://localhost/Software_lab/MedicineHouse/comment_back.php?')
             .then(response => response.json())
             .then(json => {
 
