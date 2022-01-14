@@ -1,17 +1,3 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Comment Box Create</title>
-</head>
-<body>
-<form accept="comment.php" method="POST">
-	Your Name:<input type="text" name="name" placeholder="required" class="x1"><br><br>
-	Enter Comment:<textarea name="comment" cols="50" rows="2" class="x2"></textarea ><br><br><br><br><br><br>
-	<input type="submit" name="submit" value="Comment" class="x3">
-</form>
-</body>
-</html>
 <?php
         $database_name = "project";
         $con = mysqli_connect("localhost","root","",$database_name);
@@ -34,38 +20,9 @@
         	 }
         }
 ?>
-
-<?php
-    require('./config.php');
-   ?> <h1>List of Reviews ..</h1>
-<ul>
-<?php
-      $query = "SELECT * FROM comment_box";
-     $result = mysqli_query($con,$query);
-     if(mysqli_num_rows($result) > 0) {
-          while ($row = mysqli_fetch_array($result)) {
-             ?>  
-             <div class="testimonial-box">
-             <div class="ratings-icons">               
-                             </div>
-                             <h4>Name: <?php echo $row["name"]; ?></h4>
-                        		Comment: <?php echo $row["comment"]; ?>									 							
-                             
-                         </div>					
-                     <?php
-                     
-                 }
-
-                 
-             }
-             
-           
-        
-        ?>
-</ul>
-
-
-
+<!DOCTYPE html>
+<html>
+<head>
 <style type="text/css">
 	.x1
 	{
@@ -117,3 +74,49 @@ h1{
             margin-top: 5%;
         }
 </style>
+	<title>Comment Box Create</title>
+</head>
+<body>
+<form accept="comment.php" method="POST">
+	Your Name:<input type="text" name="name" placeholder="required" class="x1"><br><br>
+	Enter Comment:<textarea name="comment" cols="50" rows="2" class="x2"></textarea ><br><br><br><br><br><br>
+	<input type="submit" name="submit" value="Comment" class="x3">
+</form>
+
+<h1>List of Reviews ..</h1>
+<table id="cmt">
+    <tr>
+        <th>Name</th>
+        <th>Comment</th>
+    </tr>
+</table>
+        <script>
+        let i = 0;
+        idk = document.getElementById('cmt')
+        
+        
+        fetch('C:/xampp/htdocs/software_lab/MedicineHouse/comment_back.php?')
+            .then(response => response.json())
+            .then(json => {
+
+                while (i < json['content'].length) {
+                    let x = idk.insertRow(i+1)
+                    x.insertCell().innerHTML = json['content'][i]['name'];
+                    x.insertCell().innerHTML = json['content'][i]['comment'];
+                    
+                    i++;
+                }
+               
+            })
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
