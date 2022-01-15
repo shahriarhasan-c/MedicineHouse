@@ -60,7 +60,7 @@ Review: <input type="text" name="rev"/><br />
         idk = document.getElementById('cmt')
          let v = "<?php echo $_GET['id'];?>";
          
-        fetch('http://localhost/sad_lab_m/rating_back.php?id='+v)
+        fetch('http://localhost/Software_lab/MedicineHouse/rating_back.php?id='+v)
             .then(response => response.json())
             .then(json => {
 
