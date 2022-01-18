@@ -12,7 +12,7 @@ cmt="good website"
 
 #Registration Page
 driver = webdriver.Chrome(ChromeDriverManager().install()) 
-driver.get("http://localhost/sad_lab/comment.php")
+driver.get("http://localhost/software_lab/MedicineHouse/comment.php")
 print(driver.title)
 driver.maximize_window()
 
@@ -29,10 +29,10 @@ link3 = driver.find_element_by_xpath('/html/body/form/input[2]')
 link3.click()
 x=input()
 
-element = driver.find_element_by_xpath('//*[@id="cmt"]/tbody/tr[7]/td[1]')
+element = driver.find_element_by_xpath('//*[@id="cmt"]/tbody/tr[6]/td[1]')
 x=input()
 
-element1 = driver.find_element_by_xpath('//*[@id="cmt"]/tbody/tr[7]/td[2]')
+element1 = driver.find_element_by_xpath('//*[@id="cmt"]/tbody/tr[6]/td[2]')
 x=input()
 
 if (element.text == name and element1.text==cmt):
