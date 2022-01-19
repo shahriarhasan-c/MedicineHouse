@@ -84,7 +84,7 @@ Review: <input type="text" name="rev"/><br />
                 document.getElementById('h').innerHTML ="Average Rating: "+s;
                 //console.log(ceil(sum/count)/5);
             })
-    </script>
+</script>
 
 </body>
 </html>
