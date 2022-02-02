@@ -1,40 +1,57 @@
 <?php
     require('./config.php');
+    session_start();
     
-    if(isset($_GET['action']) && $_GET['action'] == 'rat'){
-        if (isset($_POST['submit'])){
-        $name = $_POST['name'];
-        $ra = $_POST['ratt'];
-        $re = $_POST['rev'];
-        $id = $_GET['id'];
-        
-        $query = "INSERT INTO `rating`(`review_id`, `user_name`, `user_rating`, `user_review`) VALUES ($id, '$name', $ra, '$re')";
-        echo $query;
-        mysqli_query($con, $query);    
-        //header('location: ./shopping_cart.php');  
-        echo "
+        if(isset($_POST['csrf_token'])){
+            if($_POST['csrf_token'] == $_SESSION['csrf_token']){
+                if(isset($_GET['action']) && $_GET['action'] == 'rat'){
+                    if (isset($_POST['submit'])){
+                        $name = $_POST['name'];
+                        $ra = $_POST['ratt'];
+                        $re = $_POST['rev'];
+                        $id = $_GET['id'];
+            
+                        $query = "INSERT INTO `rating`(`review_id`, `user_name`, `user_rating`, `user_review`) VALUES ($id, '$name', $ra, '$re')";
+                        echo $query;
+                        mysqli_query($con, $query);    
+                        //header('location: ./shopping_cart.php');  
+                        echo "
 
-          				    <script>
+                                            <script>
 
-                                  alert ('Thank you for your feedback');
-                                  window.location.href='shopping_cart.php';
+                                                alert ('Thank you for your feedback');
+                                                window.location.href='shopping_cart.php';
 
-          				    </script>
+                                            </script>
 
-          				";
-        
+                                        ";
+                        
+                        }
+                    
+                } 
+            }
+          
         }
-        
-    }  
+    
     ?>
 
+<?php
 
+session_start();  
+if(
+        isset($_SESSION['csrf_token'])
+        && !empty($_SESSION['csrf_token'])
+
+){
+
+?>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="rating_css.css">           
 </head>
 <body>
 <form accept="rating.php" method="POST">
+<input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token'] ?>" >
 <div class="registration">
 Name: <input type="text" name="name"/><br />
 Ratings: <input type="text" name="ratt"/><br />
@@ -88,3 +105,14 @@ Review: <input type="text" name="rev"/><br />
 
 </body>
 </html>
+
+<?php
+}
+
+else{
+	
+	header("Location:login_html.php");
+	
+}
+
+?>

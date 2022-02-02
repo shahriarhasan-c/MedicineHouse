@@ -55,7 +55,16 @@
             }
 ?>
 
+<?php
 
+session_start();  
+if(
+        isset($_SESSION['csrf_token'])
+        && !empty($_SESSION['csrf_token'])
+
+){
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -77,3 +86,14 @@
 
 </body>
 </html>
+
+<?php
+}
+
+else{
+	
+	header("Location:login_html.php");
+	
+}
+
+?>

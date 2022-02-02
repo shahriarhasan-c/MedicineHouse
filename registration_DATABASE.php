@@ -16,7 +16,7 @@
           	// password check
 
           	if ($pass == $cpass) {
-          		
+          		$pass =  md5($pass);
           		//check email address is used previous again or not
           		     $query = " SELECT * FROM user WHERE User_Email = '$email' ";
           		     $query_check= mysqli_query( $con , $query);

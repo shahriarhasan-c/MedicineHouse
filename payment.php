@@ -3,6 +3,16 @@
     require('./config.php');   
        
 ?>
+<?php
+
+session_start();  
+if(
+        isset($_SESSION['csrf_token'])
+        && !empty($_SESSION['csrf_token'])
+
+){
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +28,7 @@
     <div class="container">
         <div class="#">
             <form action="save_payment.php" method="POST" class="#">
+                <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token'] ?>">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Name</label>
                     <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -75,3 +86,14 @@
     </div>
 </body>
 </html>
+
+<?php
+}
+
+else{
+	
+	header("Location:login_html.php");
+	
+}
+
+?>

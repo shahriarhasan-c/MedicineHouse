@@ -1,11 +1,22 @@
 <?php
     session_start();
-    require('./config.php');   
+    require('./config.php');
     if(isset($_SESSION['payment'])){
         echo '<script>alert("'.$_SESSION['payment'].'")</script>';
         unset($_SESSION['payment']);
     } 
    
+?>
+
+<?php
+
+session_start();  
+if(
+        isset($_SESSION['csrf_token'])
+        && !empty($_SESSION['csrf_token'])
+
+){
+
 ?>
 
 <!doctype html>
@@ -25,7 +36,10 @@
 
 <body>
 <div class="logout" style="margin-left: : 10px;">
-<a href="index.html"><input type="button" name="logout" value="Logout"></a>
+<a href="logout.php"><input type="button" name="logout" value="Logout"></a>
+<?php
+echo $_SESSION['csrf_token'];
+?>
 </div>
     <form action="search.php" method="POST">
          <div class="search_box" style="margin-left: : 10px;">
@@ -165,3 +179,15 @@
     </div>
 </body>
 </html>
+
+
+<?php
+}
+
+else{
+	
+	header("Location:login_html.php");
+	
+}
+
+?>

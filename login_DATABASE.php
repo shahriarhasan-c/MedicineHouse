@@ -10,6 +10,7 @@
           	  
           	  $email = $_POST['email'];
           	  $passw = $_POST['pass'];
+			  $passw = md5($passw);
           	  $query = "SELECT * FROM user WHERE User_Email='$email' AND User_Password = '$passw' ";
           	  $run =mysqli_query($con,$query);
           	  //now check is it run or not
@@ -18,16 +19,14 @@
           	  	 //now check how many rows
           	  	if (mysqli_num_rows($run)>0) {
 
-          	  			echo "
+					 
+						session_start();
+						$token = md5(uniqid(rand(),true));
+						$_SESSION['csrf_token'] = $token;
+						header("Location:shopping_cart.php");
+					  
 
-          				    <script>
-
-                                  alert ('You Are In Log In:');
-                                  window.location.href='shopping_cart.php';
-
-          				    </script>
-
-          				";
+          	  			
           			
           	  	}
           	  	else
